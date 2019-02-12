@@ -11,7 +11,7 @@
 	<asset src="www/plugin.js" target="js/plugin.js" />
 
 	<js-module name="dateSettings" src="www/plugin.js">
-		<clobbers target="cordova-plugin-timesettings" />
+		<clobbers target="dateSettings" />
 	</js-module>
 
 	<platform name="android">
