@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="dateSettings" version="0.7.0" xmlns="http://www.phonegap.com/ns/plugins/1.0">
+
+	<name>cordova-plugin-timesettings</name>
+	<author>123erfasst.de</author>
+
+	<engines>
+		<engine name="cordova" version="&gt;=3.4.0" />
+	</engines>
+
+	<asset src="www/plugin.js" target="js/plugin.js" />
+
+	<js-module name="dateSettings" src="www/plugin.js">
+		<clobbers target="cordova-plugin-timesettings" />
+	</js-module>
+
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="dateSettings">
+				<param name="android-package" value="de.erfasst.plugin.dateSettings" />
+			</feature>
+	</config-file>
+
+	<source-file src="src/android/dateSettings.java" target-dir="src/de/erfasst/plugin/" />
+</platform>
+
+<platform name="ios">
+	<config-file parent="/*" target="config.xml">
+		<feature name="dateSettings">
+			<param name="ios-package" value="dateSettings" />
+		</feature>
+	</config-file>
+	<source-file src="src/ios/dateSettings.m" />
+</platform>
+
+</plugin>

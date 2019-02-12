@@ -1,0 +1,25 @@
+{
+  "name": "dateSettings",
+  "version": "0.0.2",
+  "description": "",
+  "cordova": {
+    "id": "dateSettings",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.4.0"
+    }
+  ],
+  "author": "",
+  "license": "ISC"
+}
