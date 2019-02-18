@@ -19,6 +19,15 @@ public class dateSettings extends CordovaPlugin {
                 case "checkAutomaticTime":
                     if (this.isTimeAutomatic(context) && this.isAutomaticTimezone(context)) {
                         callbackContext.success(1);
+                        return true;
+                    }
+                    else if (!this.isTimeAutomatic(context) && this.isAutomaticTimezone(context)) {
+                    	callbackContext.success(2);
+                    	return true;
+                    }
+                    else if (this.isTimeAutomatic(context) && !this.isAutomaticTimezone(context)) {
+                    	callbackContext.success(3);
+                    	return true;
                     }
                     callbackContext.success(0);
                     return true;
