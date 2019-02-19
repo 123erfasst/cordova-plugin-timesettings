@@ -22,11 +22,11 @@ public class dateSettings extends CordovaPlugin {
                         return true;
                     }
                     else if (!this.isTimeAutomatic(context) && this.isAutomaticTimezone(context)) {
-                    	callbackContext.success(2);
+                    	callbackContext.success(-1);
                     	return true;
                     }
                     else if (this.isTimeAutomatic(context) && !this.isAutomaticTimezone(context)) {
-                    	callbackContext.success(3);
+                    	callbackContext.success(-2);
                     	return true;
                     }
                     callbackContext.success(0);
