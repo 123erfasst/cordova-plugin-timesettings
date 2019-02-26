@@ -1,9 +1,9 @@
 {
-  "name": "dateSettings",
+  "name": "cordova-plugin-timesettings",
   "version": "0.0.2",
   "description": "",
   "cordova": {
-    "id": "dateSettings",
+    "id": "cordova-plugin-timesettings",
     "platforms": [
       "android",
       "ios"
