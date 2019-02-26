@@ -10,14 +10,14 @@
 
 	<asset src="www/plugin.js" target="js/plugin.js" />
 
-	<js-module name="dateSettings" src="www/plugin.js">
-		<clobbers target="dateSettings" />
+	<js-module name="cordova-plugin-timesettings" src="www/plugin.js">
+		<clobbers target="cordova-plugin-timesettings" />
 	</js-module>
 
 	<platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
-			<feature name="dateSettings">
-				<param name="android-package" value="de.erfasst.plugin.dateSettings" />
+			<feature name="cordova-plugin-timesettings">
+				<param name="android-package" value="de.erfasst.plugin.cordova-plugin-timesettings" />
 			</feature>
 	</config-file>
 
@@ -26,8 +26,8 @@
 
 <platform name="ios">
 	<config-file parent="/*" target="config.xml">
-		<feature name="dateSettings">
-			<param name="ios-package" value="dateSettings" />
+		<feature name="cordova-plugin-timesettings">
+			<param name="ios-package" value="cordova-plugin-timesettings" />
 		</feature>
 	</config-file>
 	<source-file src="src/ios/dateSettings.m" />
