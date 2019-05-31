@@ -17,7 +17,7 @@
 	<platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
 			<feature name="cordova-plugin-timesettings">
-				<param name="android-package" value="de.erfasst.plugin.cordova-plugin-timesettings" />
+				<param name="android-package" value="de.erfasst.plugin.dateSettings" />
 			</feature>
 	</config-file>
 
