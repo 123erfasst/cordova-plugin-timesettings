@@ -9,15 +9,10 @@ import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import java.util.Arrays;
 import java.util.TimeZone;
 
 public class dateSettings extends CordovaPlugin {
     public dateSettings() {}
-
-    private String[] whiteListedTimeZones = new String[] {
-        "Europe/Berlin"
-    };
 
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         Context context = this.cordova.getActivity().getApplicationContext();
@@ -60,7 +55,7 @@ public class dateSettings extends CordovaPlugin {
     }
 
     private boolean isAutomaticTimezone(Context c) {
-        if (Arrays.asList(whiteListedTimeZones).contains(TimeZone.getDefault().getID())) {
+        if(TimeZone.getDefault().getRawOffset() == TimeZone.getTimeZone("Europe/Berlin").getRawOffset()){
             return true;
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
